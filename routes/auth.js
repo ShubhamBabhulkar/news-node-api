@@ -10,7 +10,7 @@ const config = require('config');
 router.put('/', async (req, res) => {
   const { error } = validate(req.body);
   if(error){
-      return res.status(400).send(error.details[0].message);
+      return res.status(400).json({message: error.details[0].message});
   } else {
         let user = await User.findOne({email: req.body.email});
         if(!user) return res.status(400).json('Invalie emial or password');
@@ -19,7 +19,7 @@ router.put('/', async (req, res) => {
         if (!validPassword) return res.status(400).json('Invalie emial or password');
         
         const token = jwt.sign(_.pick(user, ['_id', 'name', 'email']), config.get('jwt.password'));
-        res.json(token);
+        res.json({token: token});
     }
 });
 

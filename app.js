@@ -6,6 +6,7 @@ const winston = require('winston');
 var logger = require('morgan');
 var express = require('express');
 var cookieParser = require('cookie-parser');
+var cors = require('cors');
 
 app.use(express.json());
 app.set('views', path.join(__dirname, 'views'));
@@ -14,6 +15,7 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors())
 
 require('./startUp/loggingError')();
 require('./startUp/routes')(app);

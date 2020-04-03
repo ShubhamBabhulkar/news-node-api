@@ -13,7 +13,7 @@ router.post('/', auth, async (req, res) => {
         let news = new News(req.body);
         news = await news.save();
         news = _.pick(news, ['title']);
-        res.json({news: news, message: 'News add successfully'});
+        res.json({news: news, message: 'News added successfully'});
     }
 });
 
@@ -27,8 +27,9 @@ router.get('/', auth, async (req, res) => {
     }
 });
 
-router.get('/:id', auth, async (req, res) => {
-    let news = await News.find({user: req.params.id});
+router.get('/mynews', auth, async (req, res) => {
+    let news = await News.find({user: req.user._id})
+    .populate('user', ['name']);
     if(!news.length) {
         return res.status(404).json({message: 'News not found'});
     } else {
