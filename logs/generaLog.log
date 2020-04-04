@@ -218,3 +218,19 @@
 {"message":"Cast to ObjectId failed for value \"[object Object]\" at path \"_id\" for model \"news\"Cast to ObjectId failed for value \"[object Object]\" at path \"_id\" for model \"news\"","name":"CastError","stringValue":"\"[object Object]\"","value":"[object Object]","path":"_id","reason":{},"level":"error","stack":"CastError: Cast to ObjectId failed for value \"[object Object]\" at path \"_id\" for model \"news\"\n    at new CastError (/Users/patronous1/Documents/shubham/Node with mongo/news Project/news-node-api/node_modules/mongoose/lib/error/cast.js:29:11)\n    at model.Query.exec (/Users/patronous1/Documents/shubham/Node with mongo/news Project/news-node-api/node_modules/mongoose/lib/query.js:4331:21)\n    at model.Query.Query.then (/Users/patronous1/Documents/shubham/Node with mongo/news Project/news-node-api/node_modules/mongoose/lib/query.js:4423:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}
 {"message":"Listen port 3000","level":"info"}
 {"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}
+{"message":"Listen port 3000","level":"info"}
+{"message":"connected to mongodb...","level":"info"}

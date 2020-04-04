@@ -19,7 +19,8 @@ router.post('/', auth, async (req, res) => {
 
 router.get('/', auth, async (req, res) => {
     let news = await News.find({})
-    .populate('user', ['name']);
+    .populate('user', ['name'])
+    .sort('-_id');
     if(!news.length) {
         return res.status(404).json({message: 'News not found'});
     } else {
@@ -29,7 +30,8 @@ router.get('/', auth, async (req, res) => {
 
 router.get('/mynews', auth, async (req, res) => {
     let news = await News.find({user: req.user._id})
-    .populate('user', ['name']);
+    .populate('user', ['name'])
+    .sort('-_id');
     if(!news.length) {
         return res.status(404).json({message: 'News not found'});
     } else {
